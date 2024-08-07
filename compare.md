@@ -1,3 +1,5 @@
+# Comparison of alternative base models
+
 | Model            | Size (MiB) | Params     | Features | Latency (ms) | Accuracy |
 | ---------------- | ---------- | ---------- | -------- | ------------ | -------- |
 | resnet50         | 90.4       | 23,587,712 | 2048     | -            | 81       |
@@ -9,7 +11,11 @@
 | mobilenetv3small | 4.1        | 939,120    | 576      | 23           | 70.4     |
 | mobilenetv3large | 12.1       | 2,996,352  | 960      | 78           | 76.6     |
 
-**Remark**:
+## Remark
 
 - Latency is measured on Pixel 1 (CPU)
-- Accuracy is Top 1% ImageNet accuracy
+- Accuracy is Top 1% **ImageNet** accuracy
+
+ResNet has better accuracy than MobileNet but it may be easier to overfit.
+
+The actual accuracy depends on the dataset.
