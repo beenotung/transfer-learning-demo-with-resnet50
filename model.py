@@ -9,6 +9,7 @@ with open('saved_model/class_names.txt', 'r') as file:
   class_names=ast.literal_eval(file.read())
 
 model = tf.keras.models.load_model(checkpoint_path)
+# model.summary()
 
 def load_image(img_path):
   return tf.keras.utils.load_img(
