@@ -3,3 +3,13 @@ __pycache__
 dataset/
 test/
 saved_model/
+node_modules/
+dist/
+*-lock.json
+*-lock.yaml
+*.lock
+.*-debug.log
+*.tsbuildinfo
+.env
+*.tgz
+.DS_Store
