@@ -60,3 +60,5 @@ model.fit(
     epochs=5,
     callbacks=[checkpoint_callback],
 )
+
+model.save(checkpoint_path)
