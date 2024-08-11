@@ -1,11 +1,7 @@
 from sanic import Sanic
 from sanic.response import text, json
 import tensorflow as tf
-import ast
 from model import predict_image_file
-
-with open('saved_model/class_names.txt', 'r') as file:
-  class_names=ast.literal_eval(file.read())
 
 app = Sanic('ImageAI')
 
