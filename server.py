@@ -8,5 +8,7 @@ app = Sanic('ImageAI')
 @app.get('/classify')
 async def classify(request):
   img_path = request.args.get('img_path')
+  if img_path is None:
+    return json({'error': 'Missing img_path in request.query'})
   result = predict_image_file(img_path)
   return json(result)
