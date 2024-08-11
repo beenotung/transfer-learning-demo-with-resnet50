@@ -26,11 +26,11 @@ def predict_image_file(img_path):
   inputs = np.array([inputs])
   outputs = model.predict(inputs)
   outputs = tf.nn.softmax(outputs)
-  probabilities = np.array(outputs[0]).tolist()
+  confidences = np.array(outputs[0]).tolist()
   result = []
   for i, class_name in enumerate(class_names):
     result.append({
-      'probability': probabilities[i],
+      'confidence': confidences[i],
       'class_name': class_name,
   })
   return {'result': result}
