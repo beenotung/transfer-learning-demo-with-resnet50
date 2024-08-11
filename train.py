@@ -49,6 +49,9 @@ dataset = tf.keras.preprocessing.image_dataset_from_directory(
     verbose=True
 )
 
+with open('./saved_model/class_names.txt', 'w') as file:
+  file.write(str(dataset.class_names))
+
 checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_path,
     save_weights_only=False,
